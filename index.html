@@ -92,6 +92,11 @@
                for (var prompt in data){
                    
                    if(Math.random() > 0.7){
+                       
+                       
+                   typewriter.pauseFor(Math.floor(Math.random() * 1000));
+                       
+                       
                    typewriter.typeString(prompt.substring(0,prompt.length))
                    console.log(prompt.substring(0,prompt.length))
                    for (var completion in data[prompt]){
@@ -123,16 +128,22 @@
                  
                for (var i = 0; i < 15; i++) {
                  var randomBio = data.bios[Math.floor(Math.random() * data.bios.length)]
+                 typewriter2.pauseFor(Math.floor(Math.random() * 3000));
                  typewriter2.typeString(randomBio)    
+                 typewriter2.pauseFor(Math.floor(Math.random() * 3000));
                  typewriter2.deleteAll()
      
                  var randomBio = data.bios[Math.floor(Math.random() * data.bios.length)]
+                 typewriter3.pauseFor(Math.floor(Math.random() * 3000));
                  typewriter3.typeString(randomBio)  
-                 typewriter2.deleteAll()   
+                 typewriter3.pauseFor(Math.floor(Math.random() * 3000));
+                 typewriter3.deleteAll()   
      
                  var randomBio = data.bios[Math.floor(Math.random() * data.bios.length)]
+                 typewriter4.pauseFor(Math.floor(Math.random() * 3000));
                  typewriter4.typeString(randomBio)    
-                 typewriter2.deleteAll()  
+                 typewriter4.pauseFor(Math.floor(Math.random() * 3000));
+                 typewriter4.deleteAll()  
                }
      
             }).catch(function (err) {
