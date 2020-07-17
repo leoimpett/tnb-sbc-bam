@@ -34,8 +34,7 @@
         delay: 75,
         });
 
-        typewriter
-        .start();
+
         
         
         
@@ -66,7 +65,9 @@
                        typewriter.typeString(newstring)
                        typewriter.deleteChars(newstring.length)
                    }
+                   typewriter.deleteAll()
                }
+            typewriter.start();        
                         
             }).catch(function (err) {
             // There was an error
