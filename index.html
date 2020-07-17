@@ -17,6 +17,10 @@
         <div id="app"> </div>
         <br><br>
         <div id="app2"> </div>
+        <br><br>
+        <div id="app3"> </div>
+        <br><br>
+        <div id="app4"> </div>
     </div>
 
 </body>
@@ -25,7 +29,8 @@
     
     <script>
         
-    
+
+        
         
         var app = document.getElementById('app');
 
@@ -48,6 +53,33 @@
 
         typewriter2
         .start();
+        
+        
+                
+        var app3 = document.getElementById('app3');
+
+        var typewriter3 = new Typewriter(app3, {
+        loop: true,
+        delay: 75,
+        });
+
+        typewriter3
+        .start();
+        
+        
+                
+        var app4 = document.getElementById('app4');
+
+        var typewriter4 = new Typewriter(app4, {
+        loop: true,
+        delay: 75,
+        });
+
+        typewriter4
+        .start();
+        
+        
+        
 
                     fetch('https://raw.githubusercontent.com/leoimpett/tnb-sbc-bam/master/BiennTextBig.json').then(function (response) {
             // The API call was successful!
@@ -55,17 +87,26 @@
             }).then(function (data) {
             // This is the JSON from our response
                         
+
+                        
                for (var prompt in data){
+                   
+                   if(Math.random() > 0.7){
                    typewriter.typeString(prompt.substring(0,prompt.length))
                    console.log(prompt.substring(0,prompt.length))
                    for (var completion in data[prompt]){
-                       var newstring = data[prompt][completion].substring(prompt.length,data[prompt][completion].length)
-                       console.log(newstring)
-                       console.log(newstring.length)
-                       typewriter.typeString(newstring)
-                       typewriter.deleteChars(newstring.length)
+                       if(Math.random() > 0.7){
+                           var newstring = data[prompt][completion].substring(prompt.length,data[prompt][completion].length)
+                           console.log(newstring)
+                           console.log(newstring.length)
+                           typewriter.typeString(newstring)
+                           typewriter.deleteChars(newstring.length)
+                       }
                    }
                    typewriter.deleteAll()
+                   
+                   }
+                   
                }
             typewriter.start();        
                         
@@ -79,8 +120,21 @@
             return response.json();
             }).then(function (data) {
             // This is the JSON from our response
+                 
+               for (var i = 0; i < 15; i++) {
                  var randomBio = data.bios[Math.floor(Math.random() * data.bios.length)]
-                 typewriter2.typeString(randomBio)                        
+                 typewriter2.typeString(randomBio)    
+                 typewriter2.deleteAll()
+     
+                 var randomBio = data.bios[Math.floor(Math.random() * data.bios.length)]
+                 typewriter3.typeString(randomBio)  
+                 typewriter2.deleteAll()   
+     
+                 var randomBio = data.bios[Math.floor(Math.random() * data.bios.length)]
+                 typewriter4.typeString(randomBio)    
+                 typewriter2.deleteAll()  
+               }
+     
             }).catch(function (err) {
             // There was an error
             console.warn('Something went wrong.', err);
