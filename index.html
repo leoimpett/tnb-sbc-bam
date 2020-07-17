@@ -1,0 +1,61 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+    
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    
+    
+</head>
+<body>
+
+    
+    <div id="container">
+        <div id="app"> </div>
+    </div>
+
+</body>
+    
+    
+    
+    <script>
+        
+    
+        
+        var app = document.getElementById('app');
+
+        var typewriter = new Typewriter(app, {
+        loop: true,
+        delay: 75,
+        });
+
+        typewriter
+        .start();
+
+                    fetch('https://gist.githubusercontent.com/leoimpett/a15ebab3389b06509bea67c516afd895/raw/6f445eb30062af6b58e32add38fe7d7dc71af608/BiennTextBig.json').then(function (response) {
+            // The API call was successful!
+            return response.json();
+            }).then(function (data) {
+            // This is the JSON from our response
+               typewriter.typeString(data[0][0].substring(0,135))
+               for (var completion in data[0]){
+                   typewriter.typeString(data[0][completion].substring(135,160));
+                   typewriter.deleteChars(25);
+               }
+                        
+            }).catch(function (err) {
+            // There was an error
+            console.warn('Something went wrong.', err);
+            });
+
+        
+        
+    </script>
+</html>
+
+
+
+
