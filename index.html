@@ -58,8 +58,11 @@
                         
                for (var prompt in data){
                    typewriter.typeString(prompt.substring(0,prompt.length))
+                   console.log(prompt.substring(0,prompt.length))
                    for (var completion in data[prompt]){
-                       var newstring = data[prompt].substring(prompt.length,data[prompt].length)
+                       var newstring = data[prompt][completion].substring(prompt.length,data[prompt][completion].length)
+                       console.log(newstring)
+                       console.log(newstring.length)
                        typewriter.typeString(newstring)
                        typewriter.deleteChars(newstring.length)
                    }
