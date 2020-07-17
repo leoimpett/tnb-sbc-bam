@@ -55,10 +55,10 @@
             return response.json();
             }).then(function (data) {
             // This is the JSON from our response
-               typewriter.typeString(data[0][0].substring(0,135))
+               typewriter.typeString(data[0][0].substring(0,650))
                for (var completion in data[0]){
-                   typewriter.typeString(data[0][completion].substring(135,160));
-                   typewriter.deleteChars(25);
+                   typewriter.typeString(data[0][completion].substring(650,data[0][completion].length));
+                   typewriter.deleteChars(data[0][completion].length-650);
                }
                         
             }).catch(function (err) {
