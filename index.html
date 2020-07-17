@@ -15,6 +15,8 @@
     
     <div id="container">
         <div id="app"> </div>
+        <br><br>
+        <div id="app2"> </div>
     </div>
 
 </body>
@@ -34,8 +36,21 @@
 
         typewriter
         .start();
+        
+        
+        
+        
+        var app2 = document.getElementById('app2');
 
-                    fetch('https://gist.githubusercontent.com/leoimpett/a15ebab3389b06509bea67c516afd895/raw/6f445eb30062af6b58e32add38fe7d7dc71af608/BiennTextBig.json').then(function (response) {
+        var typewriter2 = new Typewriter(app2, {
+        loop: true,
+        delay: 75,
+        });
+
+        typewriter2
+        .start();
+
+                    fetch('https://raw.githubusercontent.com/leoimpett/tnb-sbc-bam/master/BiennTextBig.json').then(function (response) {
             // The API call was successful!
             return response.json();
             }).then(function (data) {
@@ -51,6 +66,19 @@
             console.warn('Something went wrong.', err);
             });
 
+ fetch("https://raw.githubusercontent.com/leoimpett/tnb-sbc-bam/master/GenBios.json").then(function (response) {
+            // The API call was successful!
+            return response.json();
+            }).then(function (data) {
+            // This is the JSON from our response
+                 var randomBio = data.bios[Math.floor(Math.random() * data.bios.length)]
+                 typewriter2.typeString(randomBio)                        
+            }).catch(function (err) {
+            // There was an error
+            console.warn('Something went wrong.', err);
+            });
+
+        
         
         
     </script>
