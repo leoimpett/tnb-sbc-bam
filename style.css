@@ -24,7 +24,7 @@ strong {
 
 
 body{
-    background-image: url('/logo.gif');
+    background-image: url('logo.gif');
     background-size: 25%;
   background-repeat: no-repeat;
     
