@@ -43,12 +43,12 @@ body{
     
 
   position: absolute;
-  width: 500px;
-  height: 500px;
+  width: 1250px;
+  height: 1250px;
   z-index: 15;
   top: 50%;
   left: 50%;
-  margin: -300px 0 0 -300px;
+  margin: -700px 0 0 -700px;
 }
 
 
