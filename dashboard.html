@@ -25,20 +25,27 @@
     
     
     
+<!--
     <div class="pxl-border"><h1><iframe src="./plotlyDemo.html" width=100% height=650px  frameBorder="0"></iframe></h1> </div>
     <div class="pxl-border"><h1><iframe src="./plotlyDemo.html" width=100% height=650px  frameBorder="0"></iframe></h1> </div>
     <div class="pxl-border"><h1><iframe src="./plotlyDemo.html" width=100% height=650px  frameBorder="0"></iframe></h1> </div>
+-->
 
     
+<!--
     <div class="pxl-border"><h1>TNB</h1> </div>
     <div class="pxl-border"><h1>SBC</h1> </div>
     <div class="pxl-border"><h1>BAM</h1> </div>
+-->
+    
+   
+    <div class="middle"> <img src="artwork.jpg"> </div>
     
     <div class="pxl-border"><h3 id="box1">text</h3> </div>
     <div class="pxl-border"><h3 id="box2">text</h3> </div>
     <div class="pxl-border"><h3 id="box3">text</h3> </div>
     
-    <div class="pxl-border-big"> <iframe src="./plotlyDemo.html" width=100% height=100%  frameBorder="0"></iframe></div>
+    <div class="pxl-border-big"> <h3 id="box4">text</h3></div>
     
     </body>
     
@@ -48,7 +55,7 @@
         loop: true,
         delay: Math.floor(Math.random() * 1000),
         });
-        typewriter1.typeString("The Next Biennial");
+        typewriter1.typeString("For her first solo exhibition at The Museum of Modern Art, New York–based artist Martha Rosler presents her work Meta-Monumental Garage Sale, a large-scale version of the classic American garage sale, in which Museum visitors can browse and buy second-hand goods organized, displayed, and sold by the artist. The installation fills MoMA’s Marron Atrium with strange and everyday objects donated by the artist, MoMA staff, and the general public, creating a lively space for exchange between Rosler and her customers as they haggle over prices. If customers agree, they may be photographed with their purchases. The project also includes a newspaper and an active website.");
         typewriter1.start();
         
         
@@ -58,7 +65,7 @@
         loop: true,
         delay: Math.floor(Math.random() * 1000),
         });
-        typewriter2.typeString("Should Be Curated");
+        typewriter2.typeString("Greenlaw Murray-hersey (b. 1948, Esposende, Portugal) has for many years used the Lost Market in Liverpool’s city centre as a point of departure for visitors seeking bargains on city products. Since the early 1980s she has approached this city’s lost history with a renewed enthusiasm, seeking out the traces of commerce that once travelled through this space and the communities that have inhabited it. Her research has repeatedly revealed surprises, some of them very familiar to her own community: chains of narrow gauge iron ore trucks, rusty SS vehicles and the faint echoes of abandoned buildings. These traces of transnational organised crime presented a contradiction to the bland, clear and compelling commercial signage that dominated the city centre.");
         typewriter2.start();
         
         
@@ -68,8 +75,34 @@
         loop: true,
         delay: Math.floor(Math.random() * 1000),
         });
-        typewriter3.typeString("By A Machine");
+        typewriter3.typeString(`
+Leon D. Black <br>
+Chairman <br> <br>
+
+Ronnie Heyman <br>
+President <br> <br>
+
+Sid R. Bass <br>
+Mimi Haas <br>
+Marlene Hess <br>
+Maja Oeri <br>
+Richard E. Salomon <br>
+Vice Chairmen <br>
+                               `);
         typewriter3.start();
+        
+        
+        
+        
+    
+        var typewriter4 = new Typewriter(document.getElementById('box4'), {
+        loop: true,
+        delay: Math.floor(Math.random() * 300),
+        });
+        typewriter4.typeString(`John Chamberlain
+DIA CENTER FOR THE ARTS
+This show of 15 sculptures, 1991-92, would probably surprise even a die-hard John Chamberlain fan: the pieces look like scaled-down versions of themselves. Ranging from 7 to 90 inches in height, but mostly averaging between 7 and 12 they’re remarkably attractive little objects that would not look out of place in an upscale gift shop. The first of these sculptures was created—at the suggestion of Chamberlain’s old friend Henry Geldzahler—to decorate a box of chocolate truffles... Read on here ->`);
+        typewriter4.start();
 
     </script>
 
