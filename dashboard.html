@@ -1,0 +1,50 @@
+
+
+
+
+<html>
+<head>
+    
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    
+    
+<link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+<body>
+    
+    <img src="tnb.gif" width=30%>
+    <img src="sbc.gif" width=30%>
+    <img src="bam.gif" width=30%>
+    <div class="pxl-border"><h1>TNB</h1> </div>
+    <div class="pxl-border"><h1>SNC</h1> </div>
+    <div class="pxl-border"><h1>BAM</h1> </div>
+    
+    <div class="pxl-border"><h3 id="app">text</h3> </div>
+    <div class="pxl-border"><h3>text</h3> </div>
+    <div class="pxl-border"><h3>text</h3> </div>
+    
+    
+    
+    </body>
+    
+    <script>
+    
+    
+
+        
+        
+        var app = document.getElementById('app');
+
+        var typewriter = new Typewriter(app, {
+        loop: true,
+        delay: 75,
+        });
+        
+        
+        typewriter.typeString("Hello World");
+        typewriter.start();
+
+    </script>
+
+</html>

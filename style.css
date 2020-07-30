@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 
 
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 
 #app {
   font-size: 24px;
   line-height: 24px;
   font-weight: 40;
-  font-family: 'Roboto', sans-serif;
+/*  font-family: 'Roboto', sans-serif;*/
+  font-family: 'VT323', monospace;
 }
 
 strong {
@@ -24,15 +27,28 @@ strong {
 
 
 body{
-    background-image: url('./logo.gif');
-    background-size: 25%;
-  background-repeat: no-repeat;
-    
-    
-    
     height: 10vh;
     padding:0;
     margin:0;
+    font-family: 'VT323', monospace;
+}
+
+
+.splash{
+    background-image: url('./logo.gif');
+    background-size: 100%;
+  background-repeat: no-repeat;
+    font-family: 'VT323', monospace;
+    
+    
+
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -300px 0 0 -300px;
 }
 
 
@@ -46,4 +62,98 @@ button{
     padding:0;
     border:0;
     top:0;
+}
+
+
+
+table.dashboard {
+  width: 100%;
+  height: 240px;
+  text-align: center;
+}
+table.dashboard td, table.dashboard th {
+  padding: 5px 10px;
+}
+
+
+
+
+/* PIXEL BORDER - check rights */
+
+
+:root {
+  --inner: white;
+  --border: black;
+  --accent: white;
+}
+
+
+.pxl-border {
+    
+display: inline-block;
+
+    
+    
+  margin: 2em 2em 2em 2em;
+  padding: 0 1em;
+  text-align: center;
+  width: 25%;
+  border:black;
+  box-shadow:
+    /* Inner Background Color -- Same as inner */
+      0   -6px 0  -2px var(--inner),
+      0    6px 0  -2px var(--inner),
+      0  -12px 0  -4px var(--inner),
+      0   12px 0  -4px var(--inner),
+      0  -18px 0  -8px var(--inner),
+      0   18px 0  -8px var(--inner),
+      0  -24px 0 -12px var(--inner),
+      0   24px 0 -12px var(--inner),
+    
+    /* Inner Border */
+     -2px  0   0   0   var(--border),
+      2px  0   0   0   var(--border),
+      0   -4px 0   0   var(--border),
+      0    4px 0   0   var(--border),
+      0  -10px 0  -2px var(--border),
+      0   10px 0  -2px var(--border),
+      0  -14px 0  -4px var(--border),
+      0   14px 0  -4px var(--border),
+      0  -20px 0  -8px var(--border),
+      0   20px 0  -8px var(--border),
+      0  -26px 0 -12px var(--border),
+      0   26px 0 -12px var(--border),
+    
+    /* Middle Border -- Accent */
+     -4px  0   0   0   var(--accent),
+      4px  0   0   0   var(--accent),
+      0   -2px 0   2px var(--accent),
+      0    2px 0   2px var(--accent),
+      0   -8px 0   0px var(--accent),
+      0    8px 0   0px var(--accent),
+      0  -12px 0  -2px var(--accent),
+      0   12px 0  -2px var(--accent),
+      0  -16px 0  -4px var(--accent),
+      0   16px 0  -4px var(--accent),
+      0  -22px 0  -8px var(--accent),
+      0   22px 0  -8px var(--accent),
+      0  -28px 0 -12px var(--accent),
+      0   28px 0 -12px var(--accent),
+    
+    /* Outer Border */
+     -6px  0   0   0   var(--border),
+      6px  0   0   0   var(--border),
+      0    0   0   4px var(--border),
+      0   -6px 0   2px var(--border),
+      0    6px 0   2px var(--border),
+      0  -10px 0   0   var(--border),
+      0   10px 0   0   var(--border),
+      0  -14px 0  -2px var(--border),
+      0   14px 0  -2px var(--border),
+      0  -18px 0  -4px var(--border),
+      0   18px 0  -4px var(--border),
+      0  -24px 0  -8px var(--border),
+      0   24px 0  -8px var(--border),
+      0  -30px 0 -12px var(--border),
+      0   30px 0 -12px var(--border);
 }
