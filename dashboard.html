@@ -13,16 +13,13 @@
 
 <body>
     
-    <img src="tnb.gif" width=30%>
-    <img src="sbc.gif" width=30%>
-    <img src="bam.gif" width=30%>
     <div class="pxl-border"><h1>TNB</h1> </div>
     <div class="pxl-border"><h1>SNC</h1> </div>
     <div class="pxl-border"><h1>BAM</h1> </div>
     
-    <div class="pxl-border"><h3 id="app">text</h3> </div>
-    <div class="pxl-border"><h3>text</h3> </div>
-    <div class="pxl-border"><h3>text</h3> </div>
+    <div class="pxl-border"><h3 id="box1">text</h3> </div>
+    <div class="pxl-border"><h3 id="box2">text</h3> </div>
+    <div class="pxl-border"><h3 id="box3">text</h3> </div>
     
     
     
@@ -30,20 +27,32 @@
     
     <script>
     
-    
-
-        
-        
-        var app = document.getElementById('app');
-
-        var typewriter = new Typewriter(app, {
+        var typewriter1 = new Typewriter(document.getElementById('box1'), {
         loop: true,
-        delay: 75,
+        delay: Math.floor(Math.random() * 1000),
         });
+        typewriter1.typeString("The Next Biennial");
+        typewriter1.start();
         
         
-        typewriter.typeString("Hello World");
-        typewriter.start();
+        
+    
+        var typewriter2 = new Typewriter(document.getElementById('box2'), {
+        loop: true,
+        delay: Math.floor(Math.random() * 1000),
+        });
+        typewriter2.typeString("Should Be Curated");
+        typewriter2.start();
+        
+        
+        
+    
+        var typewriter3 = new Typewriter(document.getElementById('box3'), {
+        loop: true,
+        delay: Math.floor(Math.random() * 1000),
+        });
+        typewriter3.typeString("By A Machine");
+        typewriter3.start();
 
     </script>
 
